@@ -2,7 +2,7 @@
   "id": "/nginx-clarenceb",
   "cpus": 1,
   "mem": 128,
-  "instances": 1,
+  "instances": 3,
   "container": {
     "docker": {
       "image": "mesosphere/software-architecture:clarenceb-7ec5be742439f7c1ea885ead8d90ac6f1ba07c12",
