@@ -29,8 +29,6 @@ node {
         sh "docker login -u '${env.DOCKERHUB_USERNAME}' -p '${env.DOCKERHUB_PASSWORD}' -e demo@mesosphere.com"
         sh "docker push mesosphere/software-architecture:${userName}-${gitCommit()}"
     }
-}
-
 // Deploy
 stage 'Deploy'
 
@@ -42,3 +40,5 @@ marathon(
 	appId: 'nginx-${userName}',
 	docker: "mesosphere/software-architecture:${userName}-${gitCommit()}".toString()
 )
+}
+
